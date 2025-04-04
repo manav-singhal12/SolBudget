@@ -76,7 +76,7 @@ console.log(password)
 const loggedIn = await User.findById(user._id).select("-password -refreshToken")
 
 const options ={
-    httpOnly:true,
+    // httpOnly:true,
     secure:true,
     sameSite: "None"
   }
@@ -119,7 +119,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken");
     const options = {
-        httpOnly: true,
+        // httpOnly: true,
        sameSite:"none",  
         secure: true,
         // secureProtocol: 'TLSv1_2_method',
@@ -185,7 +185,7 @@ const logoutUser = asyncHandler(async (req, res) => {
     )
     console.log(user);
     const options = {
-        httpOnly: true,
+        // httpOnly: true,
         sameSite: "none",
         secure: true,
         // secureProtocol: 'TLSv1_2_method'

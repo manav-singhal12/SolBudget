@@ -8,23 +8,23 @@ import cookieParser from 'cookie-parser';
 const app=express();
 
 
-app.use(cors({
-    origin: 'https://solbudget.vercel.app',
-    // origin: 'http://localhost:3000',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Ensure all necessary methods are allowed
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers if needed
-}));
-// app.use((req, res, next) => {
-//     res.header(
-//       "Access-Control-Allow-Origin",
-//       "website-url"
-//     );
-//     res.header("Access-Control-Allow-Credentials", "true");
-//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-//     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//     next();
-//   });
+// app.use(cors({
+//     origin: 'https://solbudget.vercel.app',
+//     // origin: 'http://localhost:3000',
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Ensure all necessary methods are allowed
+//     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers if needed
+// }));
+app.use((req, res, next) => {
+    res.header(
+      "Access-Control-Allow-Origin",
+      "https://solbudget.vercel.app"
+    );
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    next();
+  });
 
 
 app.use(express.json({

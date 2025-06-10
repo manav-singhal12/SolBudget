@@ -60,6 +60,22 @@ View categorized expenses and track your total spending over time.
 
 Use filters to analyze data by category or date range.
 
+📸 Screenshots
+
+![WhatsApp Image 2025-03-17 at 15 29 30 (1)](https://github.com/user-attachments/assets/cff1a05d-85f5-43e9-93ed-42c33204f8e7)
+
+![WhatsApp Image 2025-03-17 at 15 29 30](https://github.com/user-attachments/assets/770fba16-1674-4dd6-bf09-a74898bcb51f)
+
+![WhatsApp Image 2025-03-17 at 15 29 31](https://github.com/user-attachments/assets/8d81e08d-fc62-4ba6-a14c-c5a268752b2d)
+
+![WhatsApp Image 2025-03-17 at 16 26 35](https://github.com/user-attachments/assets/07f4f6dd-0f64-4e50-a65b-4e05e53b0a1a)
+
+![WhatsApp Image 2025-03-17 at 16 39 19](https://github.com/user-attachments/assets/2b906537-67e3-405d-b987-11004e138b96)
+
+![WhatsApp Image 2025-03-17 at 15 29 32](https://github.com/user-attachments/assets/64b491e7-114d-492f-9aa9-4dd8ea77938d)
+
+![WhatsApp Image 2025-03-17 at 15 29 32 (1)](https://github.com/user-attachments/assets/a4e64160-6087-4af2-ab14-b3339e6e92bc)
+
 
 🧱 Smart Contract (Optional)
 

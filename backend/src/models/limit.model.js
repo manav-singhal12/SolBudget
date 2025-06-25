@@ -14,10 +14,6 @@ const limitSchema = new mongoose.Schema({
         type: Number,
          required: true 
     },
-    // period: { 
-    //     type: String,
-    //      enum: ['yearly', 'weekly', 'monthly'] 
-    // },
     startDate: Date,
     endDate: Date
 },{timestamps:true});

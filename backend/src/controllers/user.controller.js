@@ -75,11 +75,12 @@ console.log(password)
     const {accessToken ,refreshToken} = await generateAccessAndRefreshTokens(user._id)
 const loggedIn = await User.findById(user._id).select("-password -refreshToken")
 
-const options ={
-    // httpOnly:true,
-    secure:true,
-    sameSite: "None"
-  }
+const options = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "Strict",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+};
  
   console.log('success')
     return res
@@ -119,13 +120,11 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken");
     const options = {
-        // httpOnly: true,
-       sameSite:"none",  
-        secure: true,
-        // secureProtocol: 'TLSv1_2_method',
-        
-
-    }
+  httpOnly: true,
+  secure: true,
+  sameSite: "Strict",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+};
 
     return res.status(200).cookie("accessToken", accessToken, options).cookie("refreshToken", refreshToken, options).json(
         new ApiResponse(200, {
@@ -185,11 +184,11 @@ const logoutUser = asyncHandler(async (req, res) => {
     )
     console.log(user);
     const options = {
-        // httpOnly: true,
-        sameSite: "none",
-        secure: true,
-        // secureProtocol: 'TLSv1_2_method'
-    }
+  httpOnly: true,
+  secure: true,
+  sameSite: "Strict",
+  maxAge: 7 * 24 * 60 * 60 * 1000
+};
     console.log("logiing out")
     return res.status(200).clearCookie("accessToken", options).clearCookie("refreshToken", options).json(
         new ApiResponse(200, {}, "User logged out successfully")
